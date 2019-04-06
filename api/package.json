@@ -13,7 +13,7 @@
     "lint": " tslint source/**/**/**.ts",
     "generate:types:json": "ts-node source/scripts/json-types.ts && tslint source/**/*.ts --fix",
     "generate:types:schema": "typescript-json-schema tsconfig.json PerilSettingsRepoJSON > ../peril-settings-json.schema",
-    "setup": "yarn run setup:plugins && yarn run setup:env",
+    "setup": "yarn run setup:plugins",
     "setup:env": "node out/scripts/setup-env.js",
     "setup:plugins": "node out/scripts/setup-plugins.js",
     "deploy:staging:api": "yarn type-check && nf run scripts/deploy-staging-api.sh",
